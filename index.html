@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- font awesome 6 -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+  </head>
+  <body>
+    
+    <header class="text-center ">
+      <div class="overlay">
+        <nav class="navbar navbar-expand-lg w-100">
+          <div class=" container-90 d-flex justify-content-between">
+            <div >
+              <a class="navbar-brand" href="#">
+                <img src="assets/css/images/logo.png" alt="The cafe logo is a non-colored coffee cup with white borders and a few coffee beans surrounding it from the right and left sides in a light orange color">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Intro</a>
+                </li>
+                <li class="nav-item d-flex align-items-center ms-2">
+                  <i class="fa-solid fa-circle main-color me-1"></i>
+                  <a class="nav-link active  text-white" aria-current="page" href="#">Select preview</a>
+                </li>
+              </ul>
+            </div>
+            <div >
+              <a href="#" class="btn log-in-btn text-white" tabindex="-1" role="button" aria-disabled="true">Log in</a>
+            </div>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+          </div>
+        </nav>
+        <div>
+          <div class="my-5">
+            <img src="assets/css/images/coffee-art.png" alt="An image representing the name of the cafe, which is a star-shaped logo and the name of the cafe">
+          </div>
+          <div class="mb-5">
+            <h1 class="text-white">Cafe</h1>
+          </div>
+          <div>
+            <img src="assets/css/images/elite.png" alt="Simple orange logo in the shape of a children's plane with a logo/looks like the menu logo">
+            <p class="main-color mt-3">Trusted By 19,000+ Customers</p>
+          </div>
+        </div>
+        
+      </div>
+      
+    </header>
+
+    <section class="Preview">
+      <div class="text-white text-center">
+        <h2 class="heading-preview">Select Preview</h2>
+        <p>All previews below are included in the download package.</p>
+      </div>
+      <div class="d-flex text-white justify-content-center">
+        <a class="btn home-menu active" >show all</a>
+        <a class="btn home-menu">cafe</a>
+        <a class="btn home-menu">resturant</a>
+      </div>
+      <div >
+        <div id="data" class="container-90 d-flex justify-content-around fw-bold flex-wrap" >
+      
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <!--To live a long life, you must first fill your stomach-->
+      <h2 class="footer-heading">The best reward for a job well done is delicious food</h2>
+      <p>One time purchase only, no additional fee required!</p>
+      <div >
+        <a href="#" class="btn log-in-btn text-white" tabindex="-1" role="button" aria-disabled="true">Log in</a>
+      </div>
+    </footer>
+    
+    <!-- bootstrap 5 -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

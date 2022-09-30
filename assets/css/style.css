@@ -1,0 +1,82 @@
+/* ---------------------------------------- start public ---------------------------------------------------------------*/
+.main-color{
+    color: #e7b35a;
+}
+body{
+    background-color: #333;
+    color: white;
+}
+/* ---------------------------------------- end public ---------------------------------------------------------------*/
+
+
+/* ---------------------------------------- start header ---------------------------------------------------------------*/
+/* ---------------- start nav section -----------------*/
+.navbar-collapse{
+    flex-grow: unset;
+}
+nav .fa-circle{
+    font-size: 0.4rem;
+}
+.container-90{
+    width: 97%;
+    margin: auto;
+}
+.nav-link:hover{
+    color: #e7b35a !important;
+}
+.log-in-btn{
+    background-color: #e7b35a;
+}
+/* ---------------- end nav section -----------------*/
+/* ---------------- start head section -----------------*/
+header{
+    background-image: url(images/c-sl-010-1024x663.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+}
+h1{
+    font-size: 5rem;
+}
+/* ---------------- end head section -----------------*/
+/* ---------------------------------------- end header ---------------------------------------------------------------*/
+
+/* ---------------------------------------- start preview ---------------------------------------------------------------*/
+.heading-preview{
+   margin-top: 6rem;
+}
+.home-menu{
+    margin-left: 1rem;
+    padding: 0.3rem;
+    background-color: #444;
+    border: 1px solid #444;
+    border-radius: 0px;
+    color: white;
+}
+.Preview .active{
+    background-color: #e7b35a !important;
+    border:1px solid #e7b35a !important;
+}
+.Preview{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #555;
+}
+/* ---------------------------------------- end preview ---------------------------------------------------------------*/
+
+/* ---------------------------------------- start footer ---------------------------------------------------------------*/
+footer{
+    background-image: url(images/home-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+}
+.footer-heading{
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+/* ---------------------------------------- end footer ---------------------------------------------------------------*/
