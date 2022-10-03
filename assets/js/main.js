@@ -1,3 +1,4 @@
+// ***************************************** start main resturant page *****************************************
 let m_pic=[
     {id :1 , image : 'assets/css/images/m-1.jpg' , tilte:'Homepage Cafe 1' , type:'cafe'},
     {id :2 , image : 'assets/css/images/m-2.jpg' , tilte:'Homepage Restaurant 1' , type:'resturant'},
@@ -40,7 +41,7 @@ for(let i=0 ; i<m_pic.length ; i++ )
         list+=`
             <div class="mt-5">
                         <img src=${m_pic[i].image} width="300px" height="250px">
-                         <p class="text-center mt-3 text-white">${m_pic[i].tilte}</p>
+                         <p class="text-center mt-3 ">${m_pic[i].tilte}</p>
                      </div>
             `
     }
@@ -59,7 +60,8 @@ for(let i=0 ; i< a.length ; i++){
         else
         home_pages('resturant');
     })
-}
+}             
+//****************************************** end main resturant page ********************************************
 
 
 
