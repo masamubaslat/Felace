@@ -15,16 +15,16 @@ let m_pic=[
    
     
 ]
-function home_pages(kind){
+function home_pages(kind , arr , place){
 let list =" ";
-for(let i=0 ; i<m_pic.length ; i++ )
-{
+for(let i=0 ; i<arr.length ; i++ )
+{    
     if(kind=='cafe'){
          if(m_pic[i].type=="cafe")
             list+=`
             <div class="mt-5">
-                        <img src=${m_pic[i].image} width="300px" height="250px">
-                         <p class="text-center mt-3 text-white">${m_pic[i].tilte}</p>
+                        <img src=${arr[i].image} width="300px" height="250px">
+                         <p class="text-center mt-3 text-white">${arr[i].tilte}</p>
                      </div>
             `
     }
@@ -32,36 +32,37 @@ for(let i=0 ; i<m_pic.length ; i++ )
         if(m_pic[i].type=="resturant")
             list+=`
             <div class="mt-5">
-                        <img src=${m_pic[i].image} width="300px" height="250px">
-                         <p class="text-center mt-3 text-white">${m_pic[i].tilte}</p>
+                        <img src=${arr[i].image} width="250px" height="200px">
+                         <p class="text-center mt-3 text-white">${arr[i].tilte}</p>
                      </div>
             `
     }
-    else if(kind=='show all'){
+    else if(kind=='show all' ||kind==' '){
         list+=`
             <div class="mt-5">
-                        <img src=${m_pic[i].image} width="300px" height="250px">
-                         <p class="text-center mt-3 ">${m_pic[i].tilte}</p>
+                        <img src=${arr[i].image} width="300px" height="250px">
+                         <p class="text-center mt-3">${arr[i].tilte}</p>
                      </div>
             `
     }
-   
 }
-document.getElementById('data').innerHTML=list;
+document.getElementById(place).innerHTML=list;
 }
-home_pages('show all');
+home_pages('show all' ,m_pic , 'data');
 let a = document.querySelectorAll('.home-menu')
 for(let i=0 ; i< a.length ; i++){
     a[i].addEventListener('click',function(e){
         if(e.target.text=='show all')
-        home_pages('show all');
+        home_pages('show all' ,m_pic , 'data');
         else if(e.target.text=='cafe')
-        home_pages('cafe');
+        home_pages('cafe',m_pic , 'data');
         else
-        home_pages('resturant');
+        home_pages('resturant',m_pic , 'data');
     })
 }             
 //****************************************** end main resturant page ********************************************
 
+
+//****************************************** start resturant --7-- page ********************************************
 
 

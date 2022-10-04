@@ -1,12 +1,18 @@
 /* ---------------------------------------- start public ---------------------------------------------------------------*/
+/* home page */
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
-
+/* res 7 */
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Mrs+Saint+Delafield&family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+:root{
+    --res7-main-color:rgb(201, 171, 129);
 }
 .main-color{
     color: #e7b35a;
@@ -281,6 +287,52 @@ footer{
 
 
 /*  *************************************** Start Resturant --7-- Page **************************************** */
+/*-------------- start header section --------------*/
+.res-7-head{
+    background-image: url(images/res7/main-bg.jpg);
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;  
+}
+.res-7-head h3{
+    font-family: 'Mrs Saint Delafield', cursive;
+    line-height: 145px;
+    font-weight: 300;
+    font-size: 8.75rem;
+    color: var(--res7-main-color);
+    
+}
+.res-7-head p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 1.313rem;
+    line-height: 32px;
+    text-align: center;
+    margin: auto;
+    width: 41.813rem;
+}
+.s1-items{
+    background-color: #040909;
+    height: 1200px;
+    position: relative;
+}
+#res1-data1{
+    top:-180px;
+    
+}
+.s1-1{
+    height: 250px;
+    width: 350px;
+    background: #000;
+    background-position: top;
+    transition: ease-in-out 4s;
+}
+
+.s1-1:hover{
+ background-position: bottom !important;
+}
+/*-------------- end header section --------------*/
 /*  *************************************** End Resturant --7-- Page ****************************************** */
 
 
