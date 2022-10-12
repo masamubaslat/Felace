@@ -12,7 +12,7 @@ let s1=[
 ]
 let s3=[
     {id :1 , image : 'assets/css/images/res7/s3-1.jpg' , tilte:'Meet The Chef' , type:'cafe'},
-    {id :2 , image : 'assets/css/images/res7/s3-2.jpg' , tilte:'Our Menu' , type:'cafe' },
+    {id :2 , image : 'assets/css/images/res7/s3-2.jpg' , tilte:'Our Menu' , link:"./resturant7 menu.html" },
     {id :3 , image : 'assets/css/images/res7/s3-3.jpg' , tilte:'Gallery Page', type:'cafe'},
     {id :4 , image : 'assets/css/images/res7/s3-4.jpg' , tilte:'About Us' , type:'resturant'},
     {id :5 , image : 'assets/css/images/res7/s3-5.jpg' , tilte:'Contact Us' , type:'cafe'},
@@ -28,8 +28,8 @@ function home_pages(arr, place){
     {   
         list+=`
                <div class="mt-5 text-center ">
-                            <div class="s1-1" style="background:url(${arr[i].image}); background-size:cover";></div>
-                            <p class="mt-3 text-white">${arr[i].tilte}</p>
+                            <a href="${arr[i].link}"><div class="s1-1" style="background:url(${arr[i].image}); background-size:cover";></div></a> 
+                            <p class="mt-3 text-white text-center w-100">${arr[i].tilte}</p>
                          </div>
                    
                 `
