@@ -50,7 +50,7 @@ nav{
 .navbar-expand-lg{
     flex-wrap: wrap;
 }
-.nav-link{
+.main-res-nav .nav-link{
     color: white;
     line-height: 1;
     font-size: 13px;
@@ -60,9 +60,7 @@ nav{
     margin-left: 1.5rem;
     line-height: 1px;
 }
-
-
-.nav-link:hover{
+.main-res-nav .nav-link:hover{
     color: #C59D5F!important;
 }
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
@@ -423,11 +421,12 @@ header .overlay{
     left: 73px;
 }
 .res7-s3{
-    height: 200vh;
+    height:max-content;
     background-color: #090d0e;
     text-align: center;
     color: #C9AB81;
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .res7-s3 p{
     width: 35%;
@@ -468,13 +467,15 @@ header .overlay{
     border-bottom: 1px solid #715b3e;
 }
 .res-menu-nav-item{
-    margin-left: 5.4rem;
+    margin-left: 6.5rem;
 }
 .res-menu-nav-item .nav-link{
     font-family: 'Open Sans', sans-serif;
     font-size: 0.875rem;
     letter-spacing: 5.04px;
     line-height: 23px;
+    color: white;
+    margin-left: 1.5rem;
 }
 .res7-menu-header{
     background: url(images/res7/Our-menu-title-img.jpg);
@@ -611,6 +612,9 @@ header .overlay{
 
 
 /*  *************************************** Start Resturant --8-- Page **************************************** */
+.res8-nav .nav-link{
+    color: #000;
+}
 /*  *************************************** End Resturant --8-- Page ****************************************** */
 
 
