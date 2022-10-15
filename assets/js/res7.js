@@ -1,4 +1,14 @@
 // ***************************************** start main resturant page *****************************************
+$(document).ready(function(){
+    //$(".res-7-loader").css('display','none');
+    $(".res-7-loader").fadeOut(2000);
+    $(".spinner").fadeOut(2000);
+   // $(".spinner").css('display','none');
+    $("body").css('overflow','auto');
+    $('.rest-head-content').fadeIn(2000);
+    $('.rest-head-content').removeClass('d-none');
+})
+
 let s1=[
     {id :1 , image : 'assets/css/images/res7/s1-1.jpg' , tilte:'Main Home' , type:'cafe'},
     {id :2 , image : 'assets/css/images/res7/s1-2.jpg' , tilte:'Bar Home' , type:'cafe' },

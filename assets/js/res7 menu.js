@@ -1,4 +1,20 @@
 // ***************************************** start resturant --7-- menue page *****************************************
+$(window).scroll(function(){
+  let t=$(window).scrollTop();
+  console.log(t);
+  if(t>=120){
+    $('.res7-s1-img').fadeIn(2000)
+    $('.res7-s1-img').removeClass('d-none');
+  }
+  if(t>=1380){
+    $('.res7-s3-img').fadeIn(2000)
+    $('.res7-s3-img').removeClass('d-none');
+  }
+  if(t>=2620){
+    $('.res7-s5-img').fadeIn(2000)
+    $('.res7-s5-img').removeClass('d-none');
+  }
+})
 let seaFoodMenu=[
   {id:0,price:'90$',des:'Toasted French bread topped with romano, cheddar'},
   {id:1,price:'76$',des:'Spreadable cream cheese, crumbled blue cheese'},
@@ -51,7 +67,7 @@ function DisplayData(start,end,place) {
                   </div>
                   <div class='d-flex justify-content-between'> 
                     <p class='res-7-meun-desc'>${seaFoodMenu[i].des}</p>
-                    <a href="#" class="btn ">Order now</a>
+                    <a href="#" class="btn">Order now</a>
                   </div>
                 </div>
       </div>
@@ -65,6 +81,8 @@ function DisplayData(start,end,place) {
 getSeaFood(0,8,'res-men-7-data');
 getSeaFood(8,16,'res-men-7-maincourses');
 getSeaFood(18,24,'res-men-7-sweet');
+
+
 
 
 //****************************************** end main resturant page ********************************************
