@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- font awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg w-100 main-res-nav">
+      <div class="upper-nav container-95 ">
+        <ul class="list-unstyled text-white d-flex ">
+          <li class="nav-link ms-auto"><a href="#"><i class="fa-brands fa-facebook-f "></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-tumblr"></i></a></li>
+        </ul>
+      </div>
+      <div class="d-flex container-95">
+        <a class="navbar-brand container-fluid" href="#"><img src="assets/css/images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  " aria-current="page" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">RESERVATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">SHOP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">JOURNAL</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-2 log-in-header">
+      <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h2>MAKE ONLINE RESERVATION</h2>
+          <h3>Booking a table online is easy</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="log_in_page mt-5 text-center">
+      <div class="text-center">
+        <h3>Log In</h3>
+        <h4>Write us</h4>
+        <img src="assets/css/images/color-separator.png" class="my-3" alt="">
+      </div>
+      <div class="w-50 m-auto">
+        <input type="text" placeholder="name">
+        <input type="email" name="" id="" placeholder="Email">
+        <input type="password" name="" id="" placeholder="password">
+      </div>
+      <a href="#" class="btn">Log in</a>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       sign up
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Sign up</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <ul class="d-flex list-unstyled w-100 justify-content-center sign-up-choice">
+            <li class="w-50">
+              <a href="#" >User</a>
+            </li>
+            <li class="w-50">
+              <a href="#">Admin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-50 m-auto sign_up">
+          <input type="text" placeholder="name" >
+          <input type="email" name="" id="" placeholder="Email" >
+          <input type="password" name="" id="" placeholder="password" >
+          <input type="tel" placeholder="Phone" >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <footer class="main-res-contact bg-dark text-center pt-5 text-white">
+      <div class="row container-90 pt-5">
+        <div class="col-md-4">
+          <h4>Our twitter</h4>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <p>about a day ago <span class="text-white">i was looking at</span>themeforest.net/item/elcon-cre… </p>
+              </div>
+              <div class="carousel-item">
+                <p>about 12 days ago <span class="text-white">i replied to @</span> <span class="text-white">elonmusk  Let’s try this then:   Rogozin new CEO of SpaceX. No</span></p>
+              </div>
+              <div class="carousel-item">
+                <p>about 12 days ago <span class="text-white">i replied to</span> elonmusk  🤡</p>
+              </div>
+            </div>
+            <div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-arrow-left-long"></i></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <span class="position-absolute twitter-icon-slider"><i class="fa-brands fa-twitter"></i></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right-long"></i></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Find us</h3>
+          <ul class="list-unstyled d-flex justify-content-around contacts-item-icon-link">
+            <li ><a href="#"><i class="fa-brands fa-facebook-f "></i></a></li>
+            <li ><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li ><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li ><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+            <li ><a href="#"><i class="fa-brands fa-tumblr"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Newsletter</h4>
+          <input type="email" class=" position-relative" placeholder="Your email address.. ">
+          <i class="fa-solid fa-envelope position-absolute"></i>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5 reservation-info">
+        <hr class="left-hr mt-4">
+          <span><i class="fa-solid fa-circle mt-4"></i></span>
+        <hr class="right-hr mt-4">
+      </div>
+      <div class="">
+        <ul class="d-flex justify-content-center contact-us">
+          <li class="me-4"><a href="#">+7(111)123456789</a></li>
+          <li class="me-4"><a href="#">27th Brooklyn New York, NY 10065</a></li>
+          <li class="me-4"><a href="#">yourmail@domain.com</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  
+    <!-- bootstrap 5 -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/res7.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

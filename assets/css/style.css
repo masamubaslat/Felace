@@ -12,6 +12,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Lato:wght@100;300&family=Miniver&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@400;700&family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
 /* res 8*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Lato:wght@100;300&family=Miniver&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@100;400;700&family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
+/*reservation*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Lato:wght@100;300&family=Miniver&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@100;400;700&family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=PT+Serif&family=Playball&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,400&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -34,6 +36,10 @@ body{
 }
 .container-80{
     width: 80%;
+    margin: auto;
+}
+.container-90{
+    width: 90%;
     margin: auto;
 }
 /* ---------------------------------------- end public ---------------------------------------------------------------*/
@@ -254,6 +260,80 @@ header .overlay{
     font-family: 'Playball', 'cursive';
     text-decoration: none;
 }
+/* ------------- End opeining hour section ---------*/
+.main-res-contact {
+    padding-bottom: 4rem;
+}
+.main-res-contact p{
+    font-family: 'Playball', 'cursive';
+    color: rgb(197,157,95);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.carousel-control-prev{
+    left: 30%;
+    top:130%
+}
+.twitter-icon-slider{
+    top:100%;
+    color: rgb(197,157,95);
+}
+.carousel-control-next{
+    right: 25%;
+    top: 130%;
+}
+.carousel-control-prev-icon{
+    background-image: none;
+}
+.carousel-control-next-icon{
+    background-image: none;
+}
+.main-res-contact h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 1.25rem;
+}
+.main-res-contact h3{
+    color: rgb(197,157,95);
+    font-family: 'Playball', 'cursive';
+    font-size: 2.125rem;
+}
+.main-res-contact input{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.833rem;
+    font-weight: 400;
+    height: 2.875rem;
+    width: 18.75rem;
+    background-color: rgba(255,255,255,0.26);
+    color: white;
+    padding-left: 1rem;
+}
+.main-res-contact .fa-envelope{
+    left: 89%;
+    margin-top: 1rem;
+    color: rgb(197,157,95);
+}
+.contacts-item-icon-link{
+    width: 50%;
+    margin: auto;
+}
+.contacts-item-icon-link a{
+    color: white;
+}
+.contact-us li{
+    padding-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+.contact-us a{
+    color: #919191;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
 /* ------------------------ End opeining hour --------------------------*/
 /* ------------------------start footer ---------------------------------*/
 .main-res-footer{
@@ -398,9 +478,9 @@ body{
 /*-------------- End section --1-- --------------*/
 
 /*-------------- Start section --2-- --------------*/
-.s2{
+.res7-s2{
     background-color: #0f1d22;
-    height: 100vh;
+    height: 120vh;
 }
 .res7-section-title-para{
     font-family: 'Miniver', cursive;
@@ -418,7 +498,7 @@ body{
     text-transform: uppercase;
     color: rgb(201, 171, 129);
 }
-.s2 p{
+.res7-s2 p{
     font-family:sans-serif;
     font-weight: 300;
     line-height: 28px;
@@ -426,29 +506,46 @@ body{
     text-align: center;
     color: white;
 }
-.s2 a {
+.res7-s2 a {
     color: white;
     text-decoration: double #C59D5F;
 }
-.laptop img{
+.res7-s2-svg{
+    margin-left: 74%;
+}
+.laptop {
+   top: -50%;
+}
+.laptop-self-image{
    width: 727.95px;
    height: 406.72px;
 }
-.landing-laptop img{
+.landing-laptop {
     position: absolute;
-    width: 521px;
-    height: 311px;
     top: 42px;
     left: 95px;
+    width: 521px;
+    height: 311px;
+    overflow: hidden;
+}
+
+@-webkit-keyframes silde_animation{
+    0%{margin-top: 0px;}
+    100%{margin-top: -65%;}
+}
+@-webkit-keyframes silde2_animation{
+    0%{margin-top: 0px;}
+    100%{margin-top: -185%;}
 }
 .tablet{
     position: absolute;
-    top: 120px;
+    top: 30px;
     left: 100px;
 }
 .tablet img{
     width: 340px;
     height: 349px;
+    overflow: hidden;
 }
 .landing-tablet img{
     position: absolute;
@@ -457,9 +554,10 @@ body{
     top: 35px;
     left: 85px;
 }
+
 .phone{
     position: absolute;
-    top: 230px;
+    top: 150px;
     left: 240px;
 }
 .phone-img{
@@ -906,10 +1004,171 @@ body{
 
 
 /*  *************************************** Start Login Page **************************************** */
+.log-in-header{
+    background-image: url(images/log_in_page_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.log-in-header h2{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    font-size: 2.75rem;
+    padding-bottom: 20px;
+}
+.log-in-header h3{
+    color:#C59D5F ;
+    font-family: 'Playball', cursive;
+    font-size: 2.125rem;
+}
+.log_in_page h3{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 3.625rem;
+    font-weight: 400;
+}
+.log_in_page h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1px;
+}
+.log_in_page input{
+    width: 75%;
+    display: inline-block;
+    height: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(249,249,249);
+    border: 2px solid rgb(221, 221, 221);
+}
+.log_in_page .btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+}
+.sign_up input{
+    width: 100%;
+}
+.sign-up-choice a{
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    width: 100%;
+    padding :0.5rem 5rem;
+}
 /*  *************************************** End Login Page ****************************************** */
 
 
 /*  *************************************** Start Reservation Page **************************************** */
+.reservation-header{
+    background-image: url(images/reservation-header-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.reservation-header h2{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    font-size: 2.75rem;
+    padding-bottom: 20px;
+}
+.reservation-header h3{
+    color:#C59D5F ;
+    font-family: 'Playball', cursive;
+    font-size: 2.125rem;
+}
+.reservation-header-overlay{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 95vh;
+}
+/* ---------- start reservation info section --------*/
+.reservation-info{
+    margin-top: 5rem;
+}
+.reservation-info h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+.reservation-info p{
+    width: 50rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+.reservation-info hr{
+    color: rgb(197,157,95);
+    width: 150px;
+    height: 1px;
+    opacity: 0.6;
+}
+.reservation-info .left-hr{
+    margin-right: 8rem;
+}
+.reservation-info .fa-circle{
+    font-size: 0.438rem;
+}
+.reservation-info .right-hr{
+    margin-left: 8rem;
+}
+.reservation-info h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin:3rem 2rem 2rem;
+}
+.reservation-info input, .reservation-info select, .reservation-info textarea{
+    width: 90%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    background-color: rgb(249,249,249);
+    border: 2px solid #ddd;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.813rem;
+    padding-left: 1rem;
+    padding-right: 0.2rem;
+}
+.reservation-info .btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+}
+/* ---------- End reservation info section --------*/
 /*  *************************************** End Reservation Page ****************************************** */
 
 

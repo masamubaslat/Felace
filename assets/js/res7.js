@@ -8,7 +8,19 @@ $(document).ready(function(){
     $('.rest-head-content').fadeIn(2000);
     $('.rest-head-content').removeClass('d-none');
 })
-
+$(window).scroll(function(){
+    let t=$(window).scrollTop();
+    console.log(t);
+    if(t>1480){
+        $('.res7-s2-img').fadeIn(3000)
+        $('.res7-s2-img').removeClass('d-none');
+        $('.res7-s2-svg').fadeIn(3000);
+        $('.res7-s2-svg').removeClass('d-none');
+        $('.landing-laptop-img2').css('animation','3s silde_animation');
+        $('.landing-laptop-img3').css({'animation':'3s silde2_animation','animation-delay':'2s'});
+       // $('.landing-laptop-img1').attr('src','assets/css/images/res7/Landing-laptop-img-2.jpg');
+    }
+})
 let s1=[
     {id :1 , image : 'assets/css/images/res7/s1-1.jpg' , tilte:'Main Home' , type:'cafe'},
     {id :2 , image : 'assets/css/images/res7/s1-2.jpg' , tilte:'Bar Home' , type:'cafe' },
