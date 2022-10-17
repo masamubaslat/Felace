@@ -1002,7 +1002,6 @@ body{
 /*  *************************************** Start Gallery Page **************************************** */
 /*  *************************************** End Gallery Page ****************************************** */
 
-
 /*  *************************************** Start Login Page **************************************** */
 .log-in-header{
     background-image: url(images/log_in_page_img.jpg);
@@ -1025,52 +1024,70 @@ body{
     font-family: 'Playball', cursive;
     font-size: 2.125rem;
 }
-.log_in_page h3{
+.log-in-header-form{
+    background-color: rgba(0,0,0,0.5);
+}
+.log-in-header input{
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    padding-left: 1rem;
+    margin:1rem auto;
+    background-color: rgb(249,249,249);
+    border: 2px solid rgb(221, 221, 221);
+}
+.log-in-header .btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    margin: 1rem auto 3rem;
+}
+.log-in-header .btn:hover{
+    background-color: #000;
+    color: rgb(197,157,95);
+    font-size: 1.156rem;
+}
+/*  *************************************** End Login Page ****************************************** */
+
+/*  *************************************** Start sign up Page **************************************** */
+.sign_up_page h3{
     color: rgb(197,157,95);
     font-family: 'Playball', cursive;
     font-size: 3.625rem;
     font-weight: 400;
 }
-.log_in_page h4{
+.sign_up_page h4{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     color: #000;
     letter-spacing: 1px;
 }
-.log_in_page input{
-    width: 75%;
+.sign_up_form{
+    width: 35%;
+}
+.sign_up_page input, .sign_up_page select{
+    width: 100%;
     display: inline-block;
     height: 3rem;
     padding-left: 1rem;
-    margin-bottom: 1rem;
+    margin:1rem auto;
     background-color: rgb(249,249,249);
     border: 2px solid rgb(221, 221, 221);
 }
-.log_in_page .btn{
+.sign_up_page .btn{
     color: rgb(197,157,95);
     font-family: 'Playball', cursive;
     font-size: 1.125rem;
     background-color: #000;
-    margin-top: 2.5rem;
-    margin-bottom: 3rem;
     letter-spacing: 2px;
     padding: 15px 40px;
+    margin: 1rem auto 3rem;
 }
-.sign_up input{
-    width: 100%;
-}
-.sign-up-choice a{
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid rgb(197,157,95);
-    font-family: 'Playball', cursive;
-    font-size: 2rem;
-    font-weight: 400;
-    width: 100%;
-    padding :0.5rem 5rem;
-}
-/*  *************************************** End Login Page ****************************************** */
+/*  *************************************** End sign up Page ****************************************** */
 
 
 /*  *************************************** Start Reservation Page **************************************** */

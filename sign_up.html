@@ -18,31 +18,78 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    
-    <header class="log-in-header">
-      <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
-        <div>
-          <div class="text-center">
-            <h2>Discover The new way to love Food</h2>
-            <h3>Best Service, Best Food, and best Atmospere !</h3>
-          </div>
-
-          <div class="w-50 m-auto log-in-header-form pt-3 mt-3">
-            <div class="container-80">
-              <input type="text" placeholder="name">
-              <input type="email" name="" id="" placeholder="Email">
-              <input type="password" name="" id="" placeholder="password">
-              <div class="text-center">
-                <a href="#" class="btn">Log in</a>
-                <a href="#" class="btn">sign up</a>
-              </div>
-              </div>
+    <nav class="navbar navbar-expand-lg w-100 main-res-nav">
+      <div class="upper-nav container-95 ">
+        <ul class="list-unstyled text-white d-flex ">
+          <li class="nav-link ms-auto"><a href="#"><i class="fa-brands fa-facebook-f "></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+          <li class="nav-link"><a href="#"><i class="fa-brands fa-tumblr"></i></a></li>
+        </ul>
+      </div>
+      <div class="d-flex container-95">
+        <a class="navbar-brand container-fluid" href="#"><img src="assets/css/images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  " aria-current="page" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">RESERVATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">SHOP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">JOURNAL</a>
+            </li>
             
-          </div>
-          
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-2 log-in-header">
+      <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h2>MAKE ONLINE RESERVATION</h2>
+          <h3>Booking a table online is easy</h3>
         </div>
       </div>
     </header>
+
+    <section class="sign_up_page mt-5 text-center">
+      <div class="text-center">
+        <h3>Log In</h3>
+        <h4>Write us</h4>
+        <img src="assets/css/images/color-separator.png" class="my-3" alt="">
+      </div>
+      <div class="sign_up_form m-auto">
+        <input type="text" placeholder="name">
+        <input type="email" name="" id="" placeholder="Email">
+        <input type="password" name="" id="" placeholder="password">
+        <input type="tel" placeholder="Phone" >
+        <select name="admin_user" id="admin_user">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <a href="#" class="btn">Cancel</a>
+      <a href="#" class="btn">sign up</a>
+    </section>
 
     <footer class="main-res-contact bg-dark text-center pt-5 text-white">
       <div class="row container-90 pt-5">
