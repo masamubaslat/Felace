@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Lato:wght@100;300&family=Miniver&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@100;400;700&family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=PT+Serif&family=Playball&family=Source+Sans+Pro:wght@300&display=swap');
 /*reservation*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,200&family=Lato:wght@100;300&family=Miniver&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@100;400;700&family=Mrs+Saint+Delafield&family=Open+Sans:wght@300&family=PT+Serif&family=Playball&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,400&display=swap');
+/*main menu*/
 *{
     margin: 0px;
     padding: 0px;
@@ -41,6 +42,20 @@ body{
 .container-90{
     width: 90%;
     margin: auto;
+}
+.subpages_header-h2{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    font-size: 2.75rem;
+    padding-bottom: 20px;
+}
+.subpages_header-h3{
+    color:#C59D5F ;
+    font-family: 'Playball', cursive;
+    font-size: 2.125rem;
 }
 /* ---------------------------------------- end public ---------------------------------------------------------------*/
 
@@ -528,7 +543,6 @@ body{
     height: 311px;
     overflow: hidden;
 }
-
 @-webkit-keyframes silde_animation{
     0%{margin-top: 0px;}
     100%{margin-top: -65%;}
@@ -554,7 +568,6 @@ body{
     top: 35px;
     left: 85px;
 }
-
 .phone{
     position: absolute;
     top: 150px;
@@ -997,6 +1010,93 @@ body{
 /*-------------- End section --1-- --------------*/
 /*-------------- End Header section --------------*/
 /*  *************************************** End Resturant --8-- Page ****************************************** */
+
+
+
+
+
+/*  *************************************** Start Main Menu Page **************************************** */
+.main_menu_header{
+    background-image: url(images/reservation_data.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.main_menu_header-form{
+    background-color: rgba(0,0,0,0.5);
+}
+.main_menu_header input{
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    padding-left: 1rem;
+    margin:1rem auto;
+    background-color: rgb(249,249,249);
+    border: 2px solid rgb(221, 221, 221);
+}
+.main_menu_header .btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    margin: 1rem auto 3rem;
+}
+.reservation-data-header .btn:hover{
+    background-color: #000;
+    color: rgb(197,157,95);
+    font-size: 1.156rem;
+}
+.main_menu_s1, .main_menu_s3, .main_menu_s5{ 
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+}
+.main_menu_s2{
+    background-image: url(images/13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.main_menu_s4{
+    background-image: url(images/20.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.main_meun_recipi_name{
+    font-family: 'Noto Serif', serif;
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 29px;
+    text-decoration: none;
+}
+.menu-item-dot {
+    display: table-cell;
+    width: 88%;
+    border-bottom: 1px dotted #000;
+}
+.main_meun_recipi_price{
+    font-family: 'Noto Serif', serif;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 15px;
+    text-decoration: none;
+}
+.main_meun_recipi_desc{
+    font-family: 'Noto Serif', serif;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+}
+/*  *************************************** End Main Menu Page ****************************************** */
 
 /*  *************************************** Start Gallery Page **************************************** */
 .reservation-data-header{

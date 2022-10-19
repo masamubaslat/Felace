@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign Up</title>
+    <title>Menu</title>
     <!-- font awesome 6 -->
     <link
       rel="stylesheet"
@@ -48,13 +48,13 @@
               <a class="nav-link " aria-current="page" href="#">RESERVATION</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">SHOP</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link " aria-current="page" href="#">CONTACT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link Login_navitem" aria-current="page" href="log_in.html">LogIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="sign_up.html">SignUp</a>
+              <a class="nav-link " aria-current="page" href="#">JOURNAL</a>
             </li>
             
           </ul>
@@ -62,41 +62,82 @@
       </div>
     </nav>
 
-    <header class="mt-2 log-in-header">
+    <header class="mt-2 main_menu_header">
       <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
         <div class="text-center">
-          <h2 class="subpages_header-h2">MAKE ONLINE RESERVATION</h2>
-          <h3 class="subpages_header-h2">Booking a table online is easy</h3>
+          <h2 class="subpages_header-h2">HOT DISHES</h2>
+          <h3 class="subpages_header-h3">Pellentesque habitant morbi</h3>
         </div>
       </div>
     </header>
-
-    <section class="sign_up_page mt-5 text-center">
-      <div class="text-center">
-        <h3>Sign Up</h3>
-        <h4>Create account</h4>
-        <img src="assets/css/images/color-separator.png" class="my-3" alt="">
+    
+    <section class="main_menu_s1 ">
+      <div class="contaier-90 text-center">
+        <div class="row " id="main_menu_s1">
+         
+        </div>
       </div>
-      <div class="sign_up_form m-auto">
-        <label for="user_name" class="text-danger text-start w-100">*</label>
-        <input type="text" placeholder="name" id="user_name" class="form-control">
-        <input type="email" name="" placeholder="Email" id="user_email">
-        <input type="password" name=""placeholder="password" id="user_password">
-        <input type="text" name="" placeholder="Location" id="user_location">
-        <input type="tel" placeholder="Phone" id="user_phone">
-        <select name="admin_user" id="choice_admin_user">
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
-        <input type="search" placeholder="Search" id="search" onkeyup="search(this)">
-      </div>
-      <button  href="#" class="btn">Cancel</button >
-      <button disabled href="#" class="btn" id="sign_up_button" >sign up</button >
-      <button href="#" class="btn btn-outline-danger" id="delete_all_button" >Delete All</button >
     </section>
 
-   
 
+    <section class="mt-2 main_menu_s2">
+      <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h2 class="subpages_header-h2">DESSERT</h2>
+          <h3 class="subpages_header-h3">Aenean ultricies mi vitae est</h3>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="main_menu_s3 text-center">
+      <div class="contaier-90">
+        <div class="row" id="main_menu_s3">
+          <div class="col-md-6">
+            <div class="d-flex justify-content-between" >
+              <a href=""></a>
+              <div class="menu-item-dot"></div>
+              <p></p>
+            </div>
+            <div>
+              <p></p>
+              <button></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="mt-2 main_menu_s4">
+      <div class="reservation-header-overlay d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h2 class="subpages_header-h2">DRINKS</h2>
+          <h3 class="subpages_header-h3">Donec eu libero</h3>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="main_menu_s5 text-center">
+      <div class="contaier-90">
+        <div class="row" id="main_menu_s5">
+          <div class="col-md-6">
+            <div class="d-flex justify-content-between" >
+              <a href=""></a>
+              <div class="menu-item-dot"></div>
+              <p></p>
+            </div>
+            <div>
+              <p></p>
+              <button></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
     <footer class="main-res-contact bg-dark text-center pt-5 text-white">
       <div class="row container-90 pt-5">
         <div class="col-md-4">
@@ -160,7 +201,7 @@
   
     <!-- bootstrap 5 -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="assets/js/sign_up.js" ></script>
+    <script src="assets/js/sign_up.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
