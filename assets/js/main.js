@@ -59,7 +59,8 @@ for(let i=0 ; i< a.length ; i++){
         else
         home_pages('resturant',m_pic , 'data');
     })
-}             
+}  
+
 //****************************************** end main resturant page ********************************************
 
 

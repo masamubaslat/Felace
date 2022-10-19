@@ -998,6 +998,56 @@ body{
 /*-------------- End Header section --------------*/
 /*  *************************************** End Resturant --8-- Page ****************************************** */
 
+/*  *************************************** Start Gallery Page **************************************** */
+.reservation-data-header{
+    background-image: url(images/reservation_data.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 95vh;
+}
+.reservation-data-header h2{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    font-size: 2.75rem;
+    padding-bottom: 20px;
+}
+.reservation-data-header h3{
+    color:#C59D5F ;
+    font-family: 'Playball', cursive;
+    font-size: 2.125rem;
+}
+.reservation-data-header-form{
+    background-color: rgba(0,0,0,0.5);
+}
+.reservation-data-header input{
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    padding-left: 1rem;
+    margin:1rem auto;
+    background-color: rgb(249,249,249);
+    border: 2px solid rgb(221, 221, 221);
+}
+.reservation-data-header .btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    margin: 1rem auto 3rem;
+}
+.reservation-data-header .btn:hover{
+    background-color: #000;
+    color: rgb(197,157,95);
+    font-size: 1.156rem;
+}
+/*  *************************************** End Gallery Page ****************************************** */
+
 
 /*  *************************************** Start Gallery Page **************************************** */
 /*  *************************************** End Gallery Page ****************************************** */

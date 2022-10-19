@@ -6,6 +6,7 @@ var UserPhone=$('#user_phone');
 var UserCat=$('#choice_admin_user');
 var userdata;
 var currentIndex;
+let currentLogInUser;
 var sign_up_but=document.getElementById('sign_up_button')
 if(localStorage.getItem('userDataList')==null){
     userdata=[];}
@@ -24,7 +25,6 @@ $('#sign_up_button').click(function(){
     
     displayUsers();
     clear();
-    
 });
 
 function addUser(){
@@ -141,7 +141,6 @@ UserName.keyup(function(){
         UserName.addClass('is-invalid')
     }
     
-    
 });
 
 
@@ -164,7 +163,13 @@ LoginButton.click(function(){
                     UserLoginPassword.removeClass('is-invalid');
                     UserLoginPassword.addClass('is-valid');
                     LoginButton.attr('href','index.html');
-                    return true;
+                   // let index = userdata.indexOf(userdata[i])
+                  //  currentLogInUser=userdata[index];
+                    //console.log(currentLogInUser);
+                   //  return currentIndex;  
+                    //currentLogInUser=
+                    //$('.Login_navitem').html('LogOut');
+                    //return true;
                 }
                 else{
                     UserLoginPassword.addClass('is-invalid')
@@ -176,10 +181,77 @@ LoginButton.click(function(){
         }
         else{
             UserLoginName.addClass('is-invalid')
-        }   
+        }
     }
-    
-    
-    
-    console.log('masaaaaa')
 })
+
+//------------------------------- Reservation
+var ReservationTime=$('#reservation_user_date');
+var ReservationDate=$('#reservation_user_time');
+var ReservationBranch=$('#reservation_res_branch');
+var Reservationcount=$('#reservation_user_number');
+var ReservationName=$('#reservation_user_name');                                        
+var ReservationEmail=$('#reservation_user_email');
+var ReservationPhone=$('#reservation_user_phone');
+var ReservationMessage=$('#reservation_user_message');
+
+var Reservations=[]
+$('#makeAReservation').click(function(){
+    addReservation();
+    displayReservations();
+    clear();
+    console.log(ReservationTime.val())
+    console.log(Reservations)
+})
+function addReservation(){
+    res={
+        time:ReservationTime.val(),
+        date:ReservationDate.val(),
+        branch:ReservationBranch.val(),
+        count:Reservationcount.val(),
+        name:ReservationName.val(),
+        email:ReservationEmail.val(),
+        phone:ReservationPhone.val(),
+        msg:ReservationMessage.val(),
+    }
+    Reservations.push(res);
+    //localStorage.setItem('userDataList',JSON.stringify(userdata));
+}
+function displayReservations(){
+    var result="";
+    for(var i=0; i<Reservations.length;i++){
+        result+=`
+        <tr>
+        <td>${i}</td>
+        <td>${Reservations[i].time}</td>
+        <td>${Reservations[i].date}</td>
+        <td>${Reservations[i].branch}</td>
+        <td>${Reservations[i].count}</td>
+        <td>${Reservations[i].name}</td>
+        <td>${Reservations[i].email}</td>
+        <td>${Reservations[i].phone}</td>
+        <td>${Reservations[i].msg}</td>
+        <td><button class="btn btn-primary" onclick="get_user_data(${i})">Update</button>
+        <button class="btn btn-danger" onclick="deleteReservation(${i})">Delete</button>
+        </td>
+      </tr>
+        `
+    }
+    $('#Reservation').html(result)
+}
+function clear(){
+ReservationTime.val('')
+ReservationDate.val('')
+ReservationBranch.val('')
+Reservationcount.val('')
+ReservationName.val('')                                       
+ReservationEmail.val('')
+ReservationPhone.val('')
+ReservationMessage.val('')
+}
+function deleteReservation(index){
+    Reservations.splice(index,1);
+    //localStorage.setItem('userDataList',JSON.stringify(userdata));
+    displayReservations();
+}
+
