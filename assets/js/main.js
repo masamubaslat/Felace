@@ -1,3 +1,33 @@
+$(document).ready(function(){
+    //$(".loader").css('display','none');
+    $(".loader").fadeOut(2000);
+    $(".spinner").fadeOut(2000);
+   // $(".spinner").css('display','none');
+    $("body").css('overflow','auto');
+    $('.rest-head-content').fadeIn(2000);
+    $('.rest-head-content').removeClass('d-none');
+})
+$(window).scroll(function(){
+    let t=$(window).scrollTop();
+    console.log(t);
+    if(t>=530){
+    $('nav').addClass('bg-white')
+    $('.nav-link').addClass('text-dark')
+    $('nav').css('transition',('1s'));
+    $('.navbar-brand-img').attr('src','assets/css/images/logo2.png')
+    }
+    else if(t>3600 || t<530){ 
+    $('.nav-link').removeClass('text-dark')
+    $('nav').removeClass('bg-white'); 
+    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+    }
+    else{
+        $('.nav-link').removeClass('text-dark')
+    $('nav').removeClass('bg-white'); 
+    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+    }
+   
+})
 // ***************************************** start main resturant page *****************************************
 let m_pic=[
     {id :1 , image : 'assets/css/images/m-1.jpg' , tilte:'Homepage Cafe 1' , type:'cafe'},
@@ -12,10 +42,9 @@ let m_pic=[
     {id :10 , image : 'assets/css/images/m-10.jpg' , tilte:'Blog Single' , type:'cafe'},
     {id :11 , image : 'assets/css/images/m-11.jpg' , tilte:'Gallery' , type:'cafe'},
     {id :11 , image : 'assets/css/images/m-12.jpg' , tilte:'Reservation' , type:'cafe'},
-   
-    
+ 
 ]
-function home_pages(kind , arr , place){
+function home_page(kind , arr , place){
 let list =" ";
 for(let i=0 ; i<arr.length ; i++ )
 {    
@@ -48,22 +77,18 @@ for(let i=0 ; i<arr.length ; i++ )
 }
 document.getElementById(place).innerHTML=list;
 }
-home_pages('show all' ,m_pic , 'data');
+home_page('show all' ,m_pic , 'data');
 let a = document.querySelectorAll('.home-menu')
 for(let i=0 ; i< a.length ; i++){
     a[i].addEventListener('click',function(e){
         if(e.target.text=='show all')
-        home_pages('show all' ,m_pic , 'data');
+        home_page('show all' ,m_pic , 'data');
         else if(e.target.text=='cafe')
-        home_pages('cafe',m_pic , 'data');
+        home_page('cafe',m_pic , 'data');
         else
-        home_pages('resturant',m_pic , 'data');
+        home_page('resturant',m_pic , 'data');
     })
 }  
 
-//****************************************** end main resturant page ********************************************
-
-
-//****************************************** start resturant --7-- page ********************************************
-
+//****************************************** end main resturant page ***************************************
 

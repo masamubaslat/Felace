@@ -57,6 +57,39 @@ body{
     font-family: 'Playball', cursive;
     font-size: 2.125rem;
 }
+.subpages_header-h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1px;
+}
+.subpages_header-btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 1.125rem;
+    background-color: #000;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    margin: 1rem auto 3rem;
+}
+.subpages_header-btn:hover{
+    background-color: #000;
+    color: rgb(197,157,95);
+    font-size: 1.156rem;
+}
+.subpages_table-btn{
+    color: rgb(197,157,95);
+    font-family: 'Playball', cursive;
+    font-size: 0.5rem;
+    background-color: #000;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    margin: 1rem auto 1rem;
+}
+.orderbtn:hover{
+    background-color: #715b3e !important;
+}
 /* ---------------------------------------- end public ---------------------------------------------------------------*/
 
 
@@ -65,9 +98,11 @@ body{
 /* ---------------- start header ----------------------*/
 /* ---------------- start nav section -----------------*/
 nav{
-    position: absolute !important;
+    position: fixed !important;
     top: 0px !important;
     z-index: 9999;
+    overflow: hidden;
+    width: 95.09vw;
 }
 .upper-nav{
     margin-left: auto;
@@ -85,7 +120,6 @@ nav{
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'PT Serif', serif;
-    margin-left: 1.5rem;
     line-height: 1px;
 }
 .main-res-nav .nav-link:hover{
@@ -96,6 +130,9 @@ nav{
 }
 .log-in-btn{
     background-color: #e7b35a;
+}
+.upper-nav li{
+    margin-left: 0.7rem;
 }
 .upper-nav .fa-brands{
     color: white;
@@ -194,6 +231,30 @@ header .overlay{
 /* ---------------- end head section -----------------*/
 /* --------------------- end header -----------------------------*/
 
+/* --------------------- Start section1 -----------------------------*/
+.mainpage-s1{
+    margin-top: 10rem;
+}
+.mainpage-s1 p{
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+.mainpage-s1 a{
+    color: #C59D5F;
+    font-family: 'Playball',' cursive';
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ourresturanrsection{
+    margin-bottom: 7rem;
+}
+/* --------------------- end section1 -----------------------------*/
 /* ---------------------start preview -----------------------------*/
 .heading-preview{
    margin-top: 6rem;
@@ -210,9 +271,7 @@ header .overlay{
     background-color: #C59D5F !important;
     border:1px solid #C59D5F !important;
 }
-.Preview{
-    border-bottom: 1px solid #555;
-}
+
 /* --------------------- end preview ------------------------------------*/
 
 /* --------------------- Start opeining hour ----------------------------*/
@@ -436,7 +495,7 @@ header .overlay{
 
 /*-------------- Start section --1-- --------------*/
 /* ---------- start Loader ----------- */
-.res-7-loader{
+.loader{
     position: absolute;
     top:0;
     bottom:0;
@@ -458,17 +517,18 @@ body{
     width: 100px;
     height: 100px;
     transform: translate(-50%,-50%);
-    border: 10px solid #00F;
-    border-top: 10px solid #c9ab81;
-    border-radius: 50%;
-    animation: spin 2s infinite linear;
+    animation: k3d 3.5s infinite linear;
 }
-@keyframes spin{
-    from{
-        transform:translate(-50%,-50%) rotate(0deg);
+@keyframes k3d{
+    0%{
+        transform:translate(-50%,-50%) rotateY(0deg);
     }
-    to{
-        transform:translate(-50%,-50%) rotate(360deg);
+    50%{
+        transform:translate(-50%,-50%) rotateY(360deg);
+        opacity: 0.3;
+    }
+    100%{
+        transform:translate(-50%,-50%) rotateY(0deg);
     }
 }
 /* ---------- End Loader ----------- */
@@ -1345,4 +1405,15 @@ body{
 
 
 /*  *************************************** Start Blog Page **************************************** */
+.reservationHistory .table , .reservationHistory th, .reservationHistory td {
+    border: 1px solid #C59D5F;
+    border-collapse: collapse;
+}
+.accounts{
+    margin: 7rem;
+}
+.accounts .table , .accounts th, .accounts td {
+    border: 1px solid #C59D5F;
+    border-collapse: collapse;
+}
 /*  *************************************** End Blog Page ****************************************** */

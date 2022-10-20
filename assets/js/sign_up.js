@@ -1,3 +1,4 @@
+/**/ 
 var UserName=$('#user_name');                                        
 var UserEmail=$('#user_email');
 var UserPassword=$('#user_password');
@@ -6,7 +7,6 @@ var UserPhone=$('#user_phone');
 var UserCat=$('#choice_admin_user');
 var userdata;
 var currentIndex;
-let currentLogInUser;
 var sign_up_but=document.getElementById('sign_up_button')
 if(localStorage.getItem('userDataList')==null){
     userdata=[];}
@@ -17,7 +17,7 @@ displayUsers();
 console.log(UserName,UserEmail,UserPassword,UserLocation,UserPhone)
 $('#sign_up_button').click(function(){
     if(sign_up_but.innerHTML=='sign up'){
-    addUser();
+          addUser();
     }
     else{
         updateUser();
@@ -51,8 +51,8 @@ function displayUsers(){
         <td>${userdata[i].location}</td>
         <td>${userdata[i].phone}</td>
         <td>${userdata[i].category}</td>
-        <td><button class="btn btn-primary" onclick="get_user_data(${i})">Update</button>
-        <button class="btn btn-danger" onclick="deleteUser(${i})">Delete</button>
+        <td><button class="btn subpages_table-btn" onclick="get_user_data(${i})">Update</button>
+        <button class="btn subpages_table-btn" onclick="deleteUser(${i})">Delete</button>
         </td>
       </tr>
         `
@@ -65,6 +65,7 @@ function clear(){
     UserPassword.val('');
     UserLocation.val('');
     UserPhone.val('');
+    UserName.removeClass('is-valid');
 }
 function deleteUser(index){
     userdata.splice(index,1);
@@ -91,8 +92,8 @@ function search(e){
         <td>${userdata[i].location}</td>
         <td>${userdata[i].phone}</td>
         <td>${userdata[i].category}</td>
-        <td><button class="btn btn-primary" onclick="get_user_data(${i})">Update</button>
-        <button class="btn btn-danger" onclick="deleteUser(${i})">Delete</button>
+        <td><button class="btn subpages_table-btn" onclick="get_user_data(${i})">Update</button>
+        <button class="btn subpages_table-btn" onclick="deleteUser(${i})">Delete</button>
         </td>
       </tr>
         `
@@ -129,20 +130,40 @@ function updateUser(){
     userdata[currentIndex].category=user_data_updated.category;
 }
 
-UserName.keyup(function(){
+UserName.keyup(function regixname(){
     var namePattern= /^[A-Z][a-z]{2,8}$/
     if(namePattern.test(UserName.val())){
-        sign_up_but.removeAttribute("disabled");
         UserName.removeClass('is-invalid')
         UserName.addClass('is-valid');
+        return true;
     }
     else{
-        sign_up_but.setAttribute("disabled","disabled");
         UserName.addClass('is-invalid')
     }
-    
 });
-
+UserEmail.keyup(function (){
+    var namePattern= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if(namePattern.test(UserEmail.val())){
+        UserEmail.removeClass('is-invalid')
+        UserEmail.addClass('is-valid');
+        return true;
+    }
+    else{
+        UserEmail.addClass('is-invalid')
+    }
+})
+/*
+UserPassword.keyup(function(){
+    var namePattern= /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
+    if(namePattern.test(UserEmail.val())){
+        UserPassword.removeClass('is-invalid')
+        UserPassword.addClass('is-valid');
+    }
+    else{
+        UserPassword.addClass('is-invalid')
+    }
+})
+*/
 
 //------------------------------------------------------
 var UserLoginName=$('#userLoginName');
@@ -195,11 +216,17 @@ var ReservationEmail=$('#reservation_user_email');
 var ReservationPhone=$('#reservation_user_phone');
 var ReservationMessage=$('#reservation_user_message');
 
-var Reservations=[]
+var Reservations;
+if(localStorage.getItem('userReservationList')==null){
+    Reservations=[];}
+else{
+    Reservations = JSON.parse(localStorage.getItem('userReservationList')) ;
+}
+displayReservations();
 $('#makeAReservation').click(function(){
     addReservation();
     displayReservations();
-    clear();
+    clearReservation()
     console.log(ReservationTime.val())
     console.log(Reservations)
 })
@@ -213,33 +240,34 @@ function addReservation(){
         email:ReservationEmail.val(),
         phone:ReservationPhone.val(),
         msg:ReservationMessage.val(),
+        title:'',
+        img:' ',
     }
     Reservations.push(res);
-    //localStorage.setItem('userDataList',JSON.stringify(userdata));
+    localStorage.setItem('userReservationList',JSON.stringify(Reservations));
 }
 function displayReservations(){
     var result="";
     for(var i=0; i<Reservations.length;i++){
         result+=`
         <tr>
-        <td>${i}</td>
+        <td>${Reservations[i].name}</td>
+        <td>${Reservations[i].branch}</td>
         <td>${Reservations[i].time}</td>
         <td>${Reservations[i].date}</td>
-        <td>${Reservations[i].branch}</td>
         <td>${Reservations[i].count}</td>
-        <td>${Reservations[i].name}</td>
         <td>${Reservations[i].email}</td>
         <td>${Reservations[i].phone}</td>
         <td>${Reservations[i].msg}</td>
-        <td><button class="btn btn-primary" onclick="get_user_data(${i})">Update</button>
-        <button class="btn btn-danger" onclick="deleteReservation(${i})">Delete</button>
+        <td><button class="btn subpages_table-btn" onclick="get_user_data(${i})">Update</button>
+        <button class="btn subpages_table-btn" onclick="deleteReservation(${i})">Delete</button>
         </td>
       </tr>
         `
     }
     $('#Reservation').html(result)
 }
-function clear(){
+function clearReservation(){
 ReservationTime.val('')
 ReservationDate.val('')
 ReservationBranch.val('')
@@ -249,9 +277,10 @@ ReservationEmail.val('')
 ReservationPhone.val('')
 ReservationMessage.val('')
 }
+
 function deleteReservation(index){
     Reservations.splice(index,1);
-    //localStorage.setItem('userDataList',JSON.stringify(userdata));
+    localStorage.setItem('userReservationList',JSON.stringify(Reservations));
     displayReservations();
 }
 
@@ -285,20 +314,19 @@ let FoodMenu=[
     {id:25,price:'26.76$',des:'Southern Pecan Streusel, creole cream and cheese ice cream'},
     {id:26,price:'90$',des:''},
     {id:27,price:'34.87$',desc:''}
-  ]
-  let seaFood = [];
+]
+let seaFood=[];
 async function getSeaFood(place,meal) {
     var response = await fetch(`https://forkify-api.herokuapp.com/api/search?q=${meal}`);
     var data = await response.json();
     seaFood = data.recipes;
-    console.log(seaFood)
     DisplayData(place);
   }
-  
-  function DisplayData(place) {
-    var result = "";
+
+function DisplayData(place) {
+    var result=``;
     for (var i = 0; i < 8; i++) {
-      result += `
+      result +=`
       <div class="col-md-5 mt-5 m-auto">
       <div class="d-flex justify-content-around align-items-center" >
         <a href="${seaFood[i].image_url}" class="main_meun_recipi_name text-start">${seaFood[i].title}</a>
@@ -307,16 +335,13 @@ async function getSeaFood(place,meal) {
       </div>
       <div class="d-flex justify-content-between">
         <p class="main_meun_recipi_desc">${FoodMenu[i].des}</p>
-        <button class="btn">Order now</button>
+        <button class="btn orderbtn">Order now</button>
       </div>
     </div>
-
         `;
     }
-  
-    document.getElementById(place).innerHTML = result;
-  }
+    document.getElementById(place).innerHTML=result;
+}
   getSeaFood('main_menu_s1','seafood')
   getSeaFood('main_menu_s3','cake')
   getSeaFood('main_menu_s5','ice cream')
-  
