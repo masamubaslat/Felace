@@ -1,3 +1,25 @@
+$(window).scroll(function(){
+    let t=$(window).scrollTop();
+    console.log(t);
+if(t>=530){
+    $('nav').addClass('bg-white')
+    $('.nav-link').addClass('text-dark')
+    $('nav').css('transition',('1s'));
+    $('.navbar-brand-img').attr('src','assets/css/images/logo2.png')
+    }
+else if(t>3600 || t<530){ 
+    $('.nav-link').removeClass('text-dark')
+    $('nav').removeClass('bg-white'); 
+    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+    }
+else{
+    $('.nav-link').removeClass('text-dark')
+    $('nav').removeClass('bg-white'); 
+    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+    }
+   
+})
+
 /**/ 
 var UserName=$('#user_name');                                        
 var UserEmail=$('#user_email');
@@ -315,33 +337,42 @@ let FoodMenu=[
     {id:26,price:'90$',des:''},
     {id:27,price:'34.87$',desc:''}
 ]
-let seaFood=[];
-async function getSeaFood(place,meal) {
+let hotFood=[]
+let Dishes=[];
+let Drinks=[];
+let currentOrder;
+async function getSeaFood(place,meal,arr) {
     var response = await fetch(`https://forkify-api.herokuapp.com/api/search?q=${meal}`);
     var data = await response.json();
-    seaFood = data.recipes;
-    DisplayData(place);
+    arr = data.recipes;
+    DisplayData(place,arr);
   }
-
-function DisplayData(place) {
+function DisplayData(place,arr) {
     var result=``;
     for (var i = 0; i < 8; i++) {
+      currentOrder=arr[i];
       result +=`
       <div class="col-md-5 mt-5 m-auto">
       <div class="d-flex justify-content-around align-items-center" >
-        <a href="${seaFood[i].image_url}" class="main_meun_recipi_name text-start">${seaFood[i].title}</a>
+        <a href="${arr[i].image_url}" class="main_meun_recipi_name text-start">${arr[i].title}</a>
         <div class="menu-item-dot"></div>
         <p class="main_meun_recipi_price">${FoodMenu[i].price}</p>
       </div>
       <div class="d-flex justify-content-between">
         <p class="main_meun_recipi_desc">${FoodMenu[i].des}</p>
-        <button class="btn orderbtn">Order now</button>
+        <button href="#" class="btn orderbtn" onclick="masa(${i})">Order now</button>
       </div>
     </div>
         `;
     }
     document.getElementById(place).innerHTML=result;
 }
-  getSeaFood('main_menu_s1','seafood')
-  getSeaFood('main_menu_s3','cake')
-  getSeaFood('main_menu_s5','ice cream')
+  getSeaFood('main_menu_s1','seafood','hotFood')
+  getSeaFood('main_menu_s3','cake','Dishes')
+  getSeaFood('main_menu_s5','ice cream','Drinks')
+
+function masa(index){
+    console.log(index);
+}
+ 
+

@@ -113,7 +113,7 @@ nav{
 .navbar-expand-lg{
     flex-wrap: wrap;
 }
-.main-res-nav .nav-link{
+.nav-link{
     color: white;
     line-height: 1;
     font-size: 13px;
@@ -122,10 +122,10 @@ nav{
     font-family: 'PT Serif', serif;
     line-height: 1px;
 }
-.main-res-nav .nav-link:hover{
+.nav-link:hover{
     color: #C59D5F!important;
 }
-.main-res-nav .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
     color: #C59D5F !important;
 }
 .log-in-btn{

@@ -12,3 +12,12 @@ $(window).scroll(function(){
     }
    
 })
+
+
+
+course={
+    name:'masa',
+    age:21,
+    study:'CSE',
+}
+ let {name,age,study} = course;

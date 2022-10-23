@@ -10,21 +10,25 @@ $(document).ready(function(){
 $(window).scroll(function(){
     let t=$(window).scrollTop();
     console.log(t);
-    if(t>=530){
-    $('nav').addClass('bg-white')
-    $('.nav-link').addClass('text-dark')
-    $('nav').css('transition',('1s'));
-    $('.navbar-brand-img').attr('src','assets/css/images/logo2.png')
+    if(t>=500){
+        $('nav').addClass('bg-white')
+        $('.nav-link').addClass('text-dark')
+        $('.nav-link i').addClass('text-dark')
+        $('nav').css('transition',('1s'));
+        $('.navbar-brand-img').attr('src','assets/css/images/logo2.png')
     }
-    else if(t>3600 || t<530){ 
-    $('.nav-link').removeClass('text-dark')
-    $('nav').removeClass('bg-white'); 
-    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+    else if(t>=3600 && t<4000){ 
+        console.log('im here')
+       // $('.nav-link').removeClass('text-dark')
+       // $('.nav-link i').removeClass('text-dark')
+       // $('nav').removeClass('bg-white'); 
+       // $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
     }
     else{
         $('.nav-link').removeClass('text-dark')
-    $('nav').removeClass('bg-white'); 
-    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
+        $('.nav-link i').removeClass('text-dark')
+        $('nav').removeClass('bg-white'); 
+        $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
     }
    
 })
@@ -42,7 +46,6 @@ let m_pic=[
     {id :10 , image : 'assets/css/images/m-10.jpg' , tilte:'Blog Single' , type:'cafe'},
     {id :11 , image : 'assets/css/images/m-11.jpg' , tilte:'Gallery' , type:'cafe'},
     {id :11 , image : 'assets/css/images/m-12.jpg' , tilte:'Reservation' , type:'cafe'},
- 
 ]
 function home_page(kind , arr , place){
 let list =" ";
