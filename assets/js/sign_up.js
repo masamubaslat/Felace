@@ -360,7 +360,8 @@ function DisplayData(place,arr) {
       </div>
       <div class="d-flex justify-content-between">
         <p class="main_meun_recipi_desc">${FoodMenu[i].des}</p>
-        <button href="#" class="btn orderbtn" onclick="masa(${i})">Order now</button>
+        <button href="#" class="btn orderbtn" onclick="masa(
+        +)">Order now</button>
       </div>
     </div>
         `;
