@@ -1,20 +1,18 @@
 // ***************************************** start resturant --7-- menue page *****************************************
+
 $(window).scroll(function(){
   let t=$(window).scrollTop();
-  console.log(t);
-  if(t>=120){
-    $('.res7-s1-img').fadeIn(2000)
-    $('.res7-s1-img').removeClass('d-none');
+  if(t>=450){
+          $('nav').addClass('bg-darkBlue');
+  $('nav').css('transition',('1s'));
   }
-  if(t>=1380){
-    $('.res7-s3-img').fadeIn(2000)
-    $('.res7-s3-img').removeClass('d-none');
+  else{
+      $('nav').removeClass('bg-darkBlue');
+      $('nav').addClass('bg-tansparent');
   }
-  if(t>=2620){
-    $('.res7-s5-img').fadeIn(2000)
-    $('.res7-s5-img').removeClass('d-none');
-  }
+ 
 })
+
 let seaFoodMenu=[
   {id:0,price:'90$',des:'Toasted French bread topped with romano, cheddar'},
   {id:1,price:'76$',des:'Spreadable cream cheese, crumbled blue cheese'},
@@ -45,6 +43,8 @@ let seaFoodMenu=[
   {id:26,price:'90$',des:''},
   {id:27,price:'34.87$',desc:''}
 ]
+
+
 let seaFood = [];
 async function getSeaFood(start,end,place) {
   var response = await fetch("https://forkify-api.herokuapp.com/api/search?q=seafood");
@@ -53,7 +53,6 @@ async function getSeaFood(start,end,place) {
   console.log(seaFood)
   DisplayData(start,end,place);
 }
-
 function DisplayData(start,end,place) {
   var result = "";
   for (var i = start; i < end; i++) {
@@ -70,14 +69,11 @@ function DisplayData(start,end,place) {
                     <a href="#" class="btn">Order now</a>
                   </div>
                 </div>
-      </div>
-                  
+      </div>            
       `;
   }
-
   document.getElementById(place).innerHTML = result;
 }
-
 getSeaFood(0,8,'res-men-7-data');
 getSeaFood(8,16,'res-men-7-maincourses');
 getSeaFood(18,24,'res-men-7-sweet');

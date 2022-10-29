@@ -1,9 +1,5 @@
 // ***************************************** start main resturant page *****************************************
 $(document).ready(function(){
-    //$(".res-7-loader").css('display','none');
-    $(".res-7-loader").fadeOut(2000);
-    $(".spinner").fadeOut(2000);
-   // $(".spinner").css('display','none');
     $("body").css('overflow','auto');
     $('.rest-head-content').fadeIn(2000);
     $('.rest-head-content').removeClass('d-none');
@@ -17,10 +13,11 @@ $(window).scroll(function(){
         $('.res7-s2-svg').fadeIn(3000);
         $('.res7-s2-svg').removeClass('d-none');
         $('.landing-laptop-img2').css('animation','3s silde_animation');
-        $('.landing-laptop-img3').css({'animation':'3s silde2_animation','animation-delay':'2s'});
-       // $('.landing-laptop-img1').attr('src','assets/css/images/res7/Landing-laptop-img-2.jpg');
+       
     }
 })
+
+
 let s1=[
     {id :1 , image : 'assets/css/images/res7/s1-1.jpg' , tilte:'Main Home' , type:'cafe'},
     {id :2 , image : 'assets/css/images/res7/s1-2.jpg' , tilte:'Bar Home' , type:'cafe' },
@@ -49,11 +46,10 @@ function home_pages(arr, place){
     for(let i=0 ; i<arr.length ; i++ )
     {   
         list+=`
-               <div class="mt-5 text-center ">
-                            <a href="${arr[i].link}"><div class="s1-1" style="background:url(${arr[i].image}); background-size:cover";></div></a> 
-                            <p class="mt-3 text-white text-center w-100">${arr[i].tilte}</p>
-                         </div>
-                   
+            <div class="mt-5 text-center ">
+                        <a href="${arr[i].link}"><div class="s1-1" style="background:url(${arr[i].image}); background-size:cover";></div></a> 
+                        <p class="mt-3 text-white text-center w-100">${arr[i].tilte}</p>
+                     </div>
                 `
     }
     document.getElementById(place).innerHTML=list;
