@@ -7,11 +7,7 @@ if(t>=530){
     $('nav').css('transition',('1s'));
     $('.navbar-brand-img').attr('src','assets/css/images/logo2.png')
     }
-else if(t>3600 || t<530){ 
-    $('.nav-link').removeClass('text-dark')
-    $('nav').removeClass('bg-white'); 
-    $('.navbar-brand-img').attr('src','assets/css/images/logo.png')
-    }
+
 else{
     $('.nav-link').removeClass('text-dark')
     $('nav').removeClass('bg-white'); 
@@ -40,6 +36,10 @@ console.log(UserName,UserEmail,UserPassword,UserLocation,UserPhone)
 $('#sign_up_button').click(function(){
     if(sign_up_but.innerHTML=='sign up'){
           addUser();
+          swal({
+            icon: "success",
+            text: "Welcome u!",
+          });
     }
     else{
         updateUser();
@@ -216,6 +216,7 @@ LoginButton.click(function(){
                 }
                 else{
                     UserLoginPassword.addClass('is-invalid')
+                    
                 }
             }   
             else{
@@ -224,6 +225,10 @@ LoginButton.click(function(){
         }
         else{
             UserLoginName.addClass('is-invalid')
+            swal("Hello world!", {
+                icon:"error",
+                text:"U don't have an account, if u want one click sign up button "
+              });
         }
     }
 })
@@ -251,6 +256,10 @@ $('#makeAReservation').click(function(){
     clearReservation()
     console.log(ReservationTime.val())
     console.log(Reservations)
+    swal({
+        icon: "success",
+        text: "Your request has been added successfully",
+      });
 })
 function addReservation(){
     res={
@@ -267,6 +276,7 @@ function addReservation(){
     }
     Reservations.push(res);
     localStorage.setItem('userReservationList',JSON.stringify(Reservations));
+    
 }
 function displayReservations(){
     var result="";
@@ -360,8 +370,7 @@ function DisplayData(place,arr) {
       </div>
       <div class="d-flex justify-content-between">
         <p class="main_meun_recipi_desc">${FoodMenu[i].des}</p>
-        <button href="#" class="btn orderbtn" onclick="masa(
-        +)">Order now</button>
+        <a href="Reservation.html" class="btn orderbtn">Order now</a>
       </div>
     </div>
         `;
@@ -372,8 +381,12 @@ function DisplayData(place,arr) {
   getSeaFood('main_menu_s3','cake','Dishes')
   getSeaFood('main_menu_s5','ice cream','Drinks')
 
-function masa(index){
-    console.log(index);
+  /*
+  swal({
+  icon: "success",
+});
+  */
+function alertsuccess(){
+    alert('ok')
 }
- 
 

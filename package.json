@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.5.2"
   },
   "devDependencies": {
